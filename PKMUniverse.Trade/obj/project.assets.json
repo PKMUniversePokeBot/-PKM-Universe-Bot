@@ -1,0 +1,211 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "PKHeX.Core/24.11.11": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/PKHeX.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/PKHeX.Core.dll": {}
+        }
+      },
+      "PKMUniverse.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/PKMUniverse.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PKMUniverse.Core.dll": {}
+        }
+      },
+      "PKMUniverse.Switch/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "PKMUniverse.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PKMUniverse.Switch.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PKMUniverse.Switch.dll": {}
+        }
+      }
+    },
+    "net9.0/win-x64": {
+      "PKHeX.Core/24.11.11": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/PKHeX.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/PKHeX.Core.dll": {}
+        }
+      },
+      "PKMUniverse.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/PKMUniverse.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PKMUniverse.Core.dll": {}
+        }
+      },
+      "PKMUniverse.Switch/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "PKMUniverse.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PKMUniverse.Switch.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PKMUniverse.Switch.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PKHeX.Core/24.11.11": {
+      "sha512": "WMHvLsAarE5dENrfLIs8vRybHM9oS7U/pTLvKypKpAQndvLMoSpJ4Nscxp1auKD/Erbi4zgvCRCrUXU/outIrQ==",
+      "type": "package",
+      "path": "pkhex.core/24.11.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net8.0/PKHeX.Core.dll",
+        "pkhex.core.24.11.11.nupkg.sha512",
+        "pkhex.core.nuspec"
+      ]
+    },
+    "PKMUniverse.Core/1.0.0": {
+      "type": "project",
+      "path": "../PKMUniverse.Core/PKMUniverse.Core.csproj",
+      "msbuildProject": "../PKMUniverse.Core/PKMUniverse.Core.csproj"
+    },
+    "PKMUniverse.Switch/1.0.0": {
+      "type": "project",
+      "path": "../PKMUniverse.Switch/PKMUniverse.Switch.csproj",
+      "msbuildProject": "../PKMUniverse.Switch/PKMUniverse.Switch.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "PKHeX.Core >= 24.11.11",
+      "PKMUniverse.Core >= 1.0.0",
+      "PKMUniverse.Switch >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ericr\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Trade\\PKMUniverse.Trade.csproj",
+      "projectName": "PKMUniverse.Trade",
+      "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Trade\\PKMUniverse.Trade.csproj",
+      "packagesPath": "C:\\Users\\ericr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Trade\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ericr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj": {
+              "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj"
+            },
+            "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Switch\\PKMUniverse.Switch.csproj": {
+              "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Switch\\PKMUniverse.Switch.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "PKHeX.Core": {
+            "target": "Package",
+            "version": "[24.11.11, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[9.0.11, 9.0.11]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
+      }
+    }
+  }
+}

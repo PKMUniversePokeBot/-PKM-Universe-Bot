@@ -1,0 +1,72 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PKMUniverse.Trade/1.0.0": {
+        "dependencies": {
+          "PKHeX.Core": "24.11.11",
+          "PKMUniverse.Core": "1.0.0",
+          "PKMUniverse.Switch": "1.0.0"
+        },
+        "runtime": {
+          "PKMUniverse.Trade.dll": {}
+        }
+      },
+      "PKHeX.Core/24.11.11": {
+        "runtime": {
+          "lib/net8.0/PKHeX.Core.dll": {
+            "assemblyVersion": "24.11.11.0",
+            "fileVersion": "24.11.11.0"
+          }
+        }
+      },
+      "PKMUniverse.Core/1.0.0": {
+        "runtime": {
+          "PKMUniverse.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PKMUniverse.Switch/1.0.0": {
+        "dependencies": {
+          "PKMUniverse.Core": "1.0.0"
+        },
+        "runtime": {
+          "PKMUniverse.Switch.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PKMUniverse.Trade/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PKHeX.Core/24.11.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WMHvLsAarE5dENrfLIs8vRybHM9oS7U/pTLvKypKpAQndvLMoSpJ4Nscxp1auKD/Erbi4zgvCRCrUXU/outIrQ==",
+      "path": "pkhex.core/24.11.11",
+      "hashPath": "pkhex.core.24.11.11.nupkg.sha512"
+    },
+    "PKMUniverse.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PKMUniverse.Switch/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

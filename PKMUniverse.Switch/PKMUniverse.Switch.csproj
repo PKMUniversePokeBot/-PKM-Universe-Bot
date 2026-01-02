@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>PKMUniverse.Switch</AssemblyName>
+    <RootNamespace>PKMUniverse.Switch</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PKMUniverse.Core\PKMUniverse.Core.csproj" />
+  </ItemGroup>
+</Project>

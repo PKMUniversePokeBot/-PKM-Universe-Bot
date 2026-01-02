@@ -1,0 +1,15 @@
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\bin\Release\net9.0\PKMUniverse.Switch.deps.json
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\bin\Release\net9.0\PKMUniverse.Switch.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\bin\Release\net9.0\PKMUniverse.Switch.pdb
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\bin\Release\net9.0\PKMUniverse.Core.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\bin\Release\net9.0\PKMUniverse.Core.pdb
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.csproj.AssemblyReference.cache
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.AssemblyInfoInputs.cache
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.AssemblyInfo.cs
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.csproj.CoreCompileInputs.cache
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUnive.D4013BEF.Up2Date
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\refint\PKMUniverse.Switch.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\PKMUniverse.Switch.pdb
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Release\net9.0\ref\PKMUniverse.Switch.dll

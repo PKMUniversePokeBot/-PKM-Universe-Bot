@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>PKM-Universe-Bot</AssemblyName>
+    <RootNamespace>PKMUniverse.App</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="PKHeX.Core" Version="24.11.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PKMUniverse.Core\PKMUniverse.Core.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Switch\PKMUniverse.Switch.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Trade\PKMUniverse.Trade.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Discord\PKMUniverse.Discord.csproj" />
+  </ItemGroup>
+</Project>
