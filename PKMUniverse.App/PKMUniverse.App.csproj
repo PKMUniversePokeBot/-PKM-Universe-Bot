@@ -16,5 +16,6 @@
     <ProjectReference Include="..\PKMUniverse.Switch\PKMUniverse.Switch.csproj" />
     <ProjectReference Include="..\PKMUniverse.Trade\PKMUniverse.Trade.csproj" />
     <ProjectReference Include="..\PKMUniverse.Discord\PKMUniverse.Discord.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Web\PKMUniverse.Web.csproj" />
   </ItemGroup>
 </Project>

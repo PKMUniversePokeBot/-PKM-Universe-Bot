@@ -56,6 +56,7 @@ public class TradeExecutorLZA : TradeExecutor
     private const ulong TradePartnerNIDOffset = 0x46F12F20;
     private const ulong LinkTradeSearchingOffset = 0x46F120D8;
     private const ulong LinkTradeFoundOffset = 0x46F120E0;
+    private const ulong TradePartnerDataOffset = 0x46F12F40;
 
     public TradeExecutorLZA(SwitchConnection connection, string botName)
         : base(connection, botName)
@@ -67,7 +68,8 @@ public class TradeExecutorLZA : TradeExecutor
         Token = token;
         var pokemon = entry.Pokemon as PKM;
 
-        if (pokemon == null)
+        // For Clone/Dump, pokemon can be null initially
+        if (pokemon == null && entry.Type == TradeType.Trade)
         {
             Log("Invalid Pokemon data");
             return false;
@@ -75,45 +77,14 @@ public class TradeExecutorLZA : TradeExecutor
 
         try
         {
-            Log($"Starting trade with {entry.TrainerName} - Trading {entry.PokemonName}");
-
-            Log("Opening trade menu...");
-            await NavigateToTradeMenuAsync();
-
-            Log($"Entering trade code: {entry.TradeCode}");
-            await EnterTradeCodeAsync(entry.TradeCode);
-
-            Log("Searching for trade partner...");
-            var found = await WaitForTradePartnerAsync(60000);
-
-            if (!found)
+            // Execute based on trade type
+            return entry.Type switch
             {
-                Log("Trade partner not found - timed out");
-                await ExitTradeAsync();
-                return false;
-            }
-
-            var partnerName = await GetTradePartnerNameAsync();
-            Log($"Found trade partner: {partnerName}");
-
-            Log("Preparing Pokemon for trade...");
-            await InjectPokemonAsync(pokemon);
-
-            Log("Confirming trade...");
-            await ConfirmTradeAsync();
-
-            var completed = await WaitForTradeCompleteAsync(30000);
-
-            if (!completed)
-            {
-                Log("Trade did not complete");
-                await ExitTradeAsync();
-                return false;
-            }
-
-            Log($"Trade completed successfully with {entry.TrainerName}!");
-            RaiseTradeComplete(entry.PokemonName, entry.TrainerName, true);
-            return true;
+                TradeType.Clone => await ExecuteCloneTradeAsync(entry),
+                TradeType.Dump => await ExecuteDumpTradeAsync(entry),
+                TradeType.Batch => await ExecuteBatchTradeAsync(entry, pokemon),
+                _ => await ExecuteNormalTradeAsync(entry, pokemon!)
+            };
         }
         catch (OperationCanceledException)
         {
@@ -128,6 +99,175 @@ public class TradeExecutorLZA : TradeExecutor
         }
     }
 
+    private async Task<bool> ExecuteNormalTradeAsync<T>(TradeEntry<T> entry, PKM pokemon) where T : class
+    {
+        Log($"Starting trade with {entry.TrainerName} - Trading {entry.PokemonName}");
+
+        Log("Opening trade menu...");
+        await NavigateToTradeMenuAsync();
+
+        Log($"Entering trade code: {entry.TradeCode}");
+        await EnterTradeCodeAsync(entry.TradeCode);
+
+        Log("Searching for trade partner...");
+        var found = await WaitForTradePartnerAsync(60000);
+
+        if (!found)
+        {
+            Log("Trade partner not found - timed out");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        var partnerName = await GetTradePartnerNameAsync();
+        Log($"Found trade partner: {partnerName}");
+
+        Log("Preparing Pokemon for trade...");
+        await InjectPokemonAsync(pokemon);
+
+        Log("Confirming trade...");
+        await ConfirmTradeAsync();
+
+        var completed = await WaitForTradeCompleteAsync(30000);
+
+        if (!completed)
+        {
+            Log("Trade did not complete");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        Log($"Trade completed successfully with {entry.TrainerName}!");
+        RaiseTradeComplete(entry.PokemonName, entry.TrainerName, true);
+        return true;
+    }
+
+    private async Task<bool> ExecuteCloneTradeAsync<T>(TradeEntry<T> entry) where T : class
+    {
+        Log($"Starting CLONE trade with {entry.TrainerName}");
+
+        Log("Opening trade menu...");
+        await NavigateToTradeMenuAsync();
+
+        Log($"Entering trade code: {entry.TradeCode}");
+        await EnterTradeCodeAsync(entry.TradeCode);
+
+        Log("Searching for trade partner...");
+        var found = await WaitForTradePartnerAsync(60000);
+
+        if (!found)
+        {
+            Log("Trade partner not found - timed out");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        var partnerName = await GetTradePartnerNameAsync();
+        Log($"Found trade partner: {partnerName}");
+
+        Log("Waiting for user to show their Pokemon...");
+        await Task.Delay(3000, Token);
+
+        var incomingData = await Connection.ReadBytesMainAsync(TradePartnerDataOffset, 344, Token);
+        if (incomingData.Length < 344)
+        {
+            Log("Could not read partner's Pokemon");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        var clonedPokemon = new PK9(incomingData);
+        var clonedName = GetPokemonNameStatic(clonedPokemon);
+        Log($"Cloning {clonedName}...");
+
+        await InjectPokemonAsync(clonedPokemon);
+
+        Log("Confirming trade...");
+        await ConfirmTradeAsync();
+
+        var completed = await WaitForTradeCompleteAsync(30000);
+
+        if (!completed)
+        {
+            Log("Clone trade did not complete");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        Log($"Clone trade completed - {clonedName} cloned for {entry.TrainerName}!");
+        RaiseTradeComplete(clonedName, entry.TrainerName, true);
+        return true;
+    }
+
+    private async Task<bool> ExecuteDumpTradeAsync<T>(TradeEntry<T> entry) where T : class
+    {
+        Log($"Starting DUMP trade with {entry.TrainerName}");
+
+        Log("Opening trade menu...");
+        await NavigateToTradeMenuAsync();
+
+        Log($"Entering trade code: {entry.TradeCode}");
+        await EnterTradeCodeAsync(entry.TradeCode);
+
+        Log("Searching for trade partner...");
+        var found = await WaitForTradePartnerAsync(60000);
+
+        if (!found)
+        {
+            Log("Trade partner not found - timed out");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        var partnerName = await GetTradePartnerNameAsync();
+        Log($"Found trade partner: {partnerName}");
+
+        Log("Waiting for user to show their Pokemon...");
+        await Task.Delay(3000, Token);
+
+        var incomingData = await Connection.ReadBytesMainAsync(TradePartnerDataOffset, 344, Token);
+        if (incomingData.Length < 344)
+        {
+            Log("Could not read partner's Pokemon");
+            await ExitTradeAsync();
+            return false;
+        }
+
+        var dumpedPokemon = new PK9(incomingData);
+        var dumpedName = GetPokemonNameStatic(dumpedPokemon);
+        Log($"Dumping {dumpedName}...");
+
+        var fileName = $"dump_{entry.UserId}_{dumpedPokemon.Species}_{DateTime.Now:yyyyMMdd_HHmmss}.pk9";
+        var dumpPath = Path.Combine("dumps", fileName);
+        Directory.CreateDirectory("dumps");
+        await File.WriteAllBytesAsync(dumpPath, dumpedPokemon.DecryptedBoxData, Token);
+
+        Log($"Pokemon dumped to: {dumpPath}");
+        await ExitTradeAsync();
+
+        Log($"Dump completed - {dumpedName} saved for {entry.TrainerName}!");
+        RaiseTradeComplete(dumpedName, entry.TrainerName, true);
+        return true;
+    }
+
+    private async Task<bool> ExecuteBatchTradeAsync<T>(TradeEntry<T> entry, PKM? pokemon) where T : class
+    {
+        if (pokemon == null)
+        {
+            Log("No Pokemon for batch trade");
+            return false;
+        }
+        return await ExecuteNormalTradeAsync(entry, pokemon);
+    }
+
+    private static string GetPokemonNameStatic(PKM pokemon)
+    {
+        var species = GameInfo.Strings.Species;
+        if (pokemon.Species < species.Count)
+            return species[pokemon.Species];
+        return $"Pokemon #{pokemon.Species}";
+    }
+
     private async Task NavigateToTradeMenuAsync()
     {
         await ClickAsync(SwitchButton.X, 1000);
@@ -140,7 +280,6 @@ public class TradeExecutorLZA : TradeExecutor
     private async Task EnterTradeCodeAsync(int code)
     {
         var codeStr = code.ToString("D8");
-
         foreach (char c in codeStr)
         {
             int digit = c - '0';
@@ -149,7 +288,6 @@ public class TradeExecutorLZA : TradeExecutor
 
             for (int i = 0; i < targetRow; i++)
                 await ClickAsync(SwitchButton.DDOWN, 100);
-
             for (int i = 0; i < targetCol; i++)
                 await ClickAsync(SwitchButton.DRIGHT, 100);
 
@@ -157,31 +295,23 @@ public class TradeExecutorLZA : TradeExecutor
 
             for (int i = 0; i < targetRow; i++)
                 await ClickAsync(SwitchButton.DUP, 100);
-
             for (int i = 0; i < targetCol; i++)
                 await ClickAsync(SwitchButton.DLEFT, 100);
         }
-
         await ClickAsync(SwitchButton.PLUS, 1000);
     }
 
     private async Task<bool> WaitForTradePartnerAsync(int timeoutMs)
     {
         var sw = System.Diagnostics.Stopwatch.StartNew();
-
         while (sw.ElapsedMilliseconds < timeoutMs)
         {
             Token.ThrowIfCancellationRequested();
-
             var data = await Connection.ReadBytesMainAsync(LinkTradeFoundOffset, 1, Token);
             if (data.Length > 0 && data[0] == 1)
-            {
                 return true;
-            }
-
             await Task.Delay(500, Token);
         }
-
         return false;
     }
 
@@ -207,29 +337,21 @@ public class TradeExecutorLZA : TradeExecutor
     private async Task<bool> WaitForTradeCompleteAsync(int timeoutMs)
     {
         var sw = System.Diagnostics.Stopwatch.StartNew();
-
         while (sw.ElapsedMilliseconds < timeoutMs)
         {
             Token.ThrowIfCancellationRequested();
-
             var data = await Connection.ReadBytesMainAsync(LinkTradeFoundOffset, 1, Token);
             if (data.Length > 0 && data[0] == 0)
-            {
                 return true;
-            }
-
             await Task.Delay(500, Token);
         }
-
         return false;
     }
 
     private async Task ExitTradeAsync()
     {
         for (int i = 0; i < 5; i++)
-        {
             await ClickAsync(SwitchButton.B, 500);
-        }
     }
 }
 
@@ -258,8 +380,6 @@ public class TradeExecutorSV : TradeExecutor
         try
         {
             Log($"Starting SV trade with {entry.TrainerName} - Trading {entry.PokemonName}");
-
-            // SV-specific trade logic
             Log($"Trade completed successfully with {entry.TrainerName}!");
             RaiseTradeComplete(entry.PokemonName, entry.TrainerName, true);
             return true;
