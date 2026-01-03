@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5bzMXEduBdI=",
+  "dgSpecHash": "hDUoH3IArrE=",
   "success": true,
   "projectFilePath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Trade\\PKMUniverse.Trade.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ericr\\.nuget\\packages\\pkhex.core\\24.11.11\\pkhex.core.24.11.11.nupkg.sha512",
-    "C:\\Users\\ericr\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\ericr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
-    "C:\\Users\\ericr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
+    "C:\\Users\\ericr\\.nuget\\packages\\pkhex.core\\24.11.11\\pkhex.core.24.11.11.nupkg.sha512"
   ],
   "logs": []
 }
