@@ -17,5 +17,8 @@
     <ProjectReference Include="..\PKMUniverse.Trade\PKMUniverse.Trade.csproj" />
     <ProjectReference Include="..\PKMUniverse.Discord\PKMUniverse.Discord.csproj" />
     <ProjectReference Include="..\PKMUniverse.Web\PKMUniverse.Web.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Twitch\PKMUniverse.Twitch.csproj" />
+    <ProjectReference Include="..\PKMUniverse.YouTube\PKMUniverse.YouTube.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Legality\PKMUniverse.Legality.csproj" />
   </ItemGroup>
 </Project>

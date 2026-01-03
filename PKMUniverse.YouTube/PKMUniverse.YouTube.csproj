@@ -3,15 +3,13 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>PKMUniverse.Trade</AssemblyName>
-    <RootNamespace>PKMUniverse.Trade</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="PKHeX.Core" Version="24.11.11" />
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.68.0.3571" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PKMUniverse.Core\PKMUniverse.Core.csproj" />
-    <ProjectReference Include="..\PKMUniverse.Switch\PKMUniverse.Switch.csproj" />
-    <ProjectReference Include="..\PKMUniverse.Legality\PKMUniverse.Legality.csproj" />
+    <ProjectReference Include="..\PKMUniverse.Trade\PKMUniverse.Trade.csproj" />
   </ItemGroup>
 </Project>
