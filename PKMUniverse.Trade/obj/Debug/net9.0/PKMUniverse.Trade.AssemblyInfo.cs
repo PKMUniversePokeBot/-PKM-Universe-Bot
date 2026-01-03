@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PKMUniverse.Trade")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9a5dbd8cebdc66c8631871e494d8597e974110b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PKMUniverse.Trade")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PKMUniverse.Trade")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,3 +17,6 @@ C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\obj\Debug\net9
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\obj\Debug\net9.0\refint\PKMUniverse.Discord.dll
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\obj\Debug\net9.0\PKMUniverse.Discord.pdb
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\obj\Debug\net9.0\ref\PKMUniverse.Discord.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\obj\Debug\net9.0\PKMUniverse.Discord.sourcelink.json
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\bin\Debug\net9.0\PKMUniverse.Legality.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Discord\bin\Debug\net9.0\PKMUniverse.Legality.pdb

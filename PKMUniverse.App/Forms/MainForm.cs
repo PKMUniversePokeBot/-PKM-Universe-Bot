@@ -82,7 +82,7 @@ public partial class MainForm : Form
 
     private void SetupRunner()
     {
-        _runner = new TradeBotRunner(_config.Hub.MaxQueueSize);
+        _runner = new TradeBotRunner(_config.Hub.Queue.MaxQueueSize);
         _runner.OnTradeComplete += (pokemon, trainer, success) =>
         {
             if (success) _totalTrades++;

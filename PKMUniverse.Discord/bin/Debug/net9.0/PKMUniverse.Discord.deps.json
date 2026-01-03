@@ -170,6 +170,18 @@
           }
         }
       },
+      "PKMUniverse.Legality/1.0.0": {
+        "dependencies": {
+          "PKHeX.Core": "24.11.11",
+          "PKMUniverse.Core": "1.0.0"
+        },
+        "runtime": {
+          "PKMUniverse.Legality.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "PKMUniverse.Switch/1.0.0": {
         "dependencies": {
           "PKMUniverse.Core": "1.0.0"
@@ -185,6 +197,7 @@
         "dependencies": {
           "PKHeX.Core": "24.11.11",
           "PKMUniverse.Core": "1.0.0",
+          "PKMUniverse.Legality": "1.0.0",
           "PKMUniverse.Switch": "1.0.0"
         },
         "runtime": {
@@ -301,6 +314,11 @@
       "hashPath": "system.reactive.6.0.1.nupkg.sha512"
     },
     "PKMUniverse.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PKMUniverse.Legality/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

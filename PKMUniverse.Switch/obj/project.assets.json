@@ -12,18 +12,6 @@
           "bin/placeholder/PKMUniverse.Core.dll": {}
         }
       }
-    },
-    "net9.0/win-x64": {
-      "PKMUniverse.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/PKMUniverse.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PKMUniverse.Core.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -101,23 +89,11 @@
             "version": "[9.0.11, 9.0.11]"
           },
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[9.0.11, 9.0.11]"
           },
           {
-            "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
             "version": "[9.0.11, 9.0.11]"
           }
         ],
@@ -127,11 +103,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win-x64": {
-        "#import": []
       }
     }
   }

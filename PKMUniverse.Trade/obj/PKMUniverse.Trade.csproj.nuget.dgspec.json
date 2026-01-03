@@ -60,23 +60,11 @@
               "version": "[9.0.11, 9.0.11]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[9.0.11, 9.0.11]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[9.0.11, 9.0.11]"
             }
           ],
@@ -87,10 +75,88 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj",
+        "projectName": "PKMUniverse.Legality",
+        "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj",
+        "packagesPath": "C:\\Users\\ericr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ericr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj": {
+                "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "PKHeX.Core": {
+              "target": "Package",
+              "version": "[24.11.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -154,23 +220,11 @@
               "version": "[9.0.11, 9.0.11]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[9.0.11, 9.0.11]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[9.0.11, 9.0.11]"
             }
           ],
@@ -180,11 +234,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     },
@@ -212,6 +261,9 @@
             "projectReferences": {
               "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj": {
                 "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj"
+              },
+              "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj": {
+                "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj"
               },
               "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Switch\\PKMUniverse.Switch.csproj": {
                 "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Switch\\PKMUniverse.Switch.csproj"
@@ -257,23 +309,11 @@
               "version": "[9.0.11, 9.0.11]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[9.0.11, 9.0.11]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.11, 9.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[9.0.11, 9.0.11]"
             }
           ],
@@ -283,11 +323,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }

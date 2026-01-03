@@ -9,3 +9,4 @@ C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Core\obj\Debug\net9.0\
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Core\obj\Debug\net9.0\refint\PKMUniverse.Core.dll
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Core\obj\Debug\net9.0\PKMUniverse.Core.pdb
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Core\obj\Debug\net9.0\ref\PKMUniverse.Core.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Core\obj\Debug\net9.0\PKMUniverse.Core.sourcelink.json

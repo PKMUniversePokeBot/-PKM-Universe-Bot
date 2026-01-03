@@ -10,6 +10,7 @@
         "dependencies": {
           "PKHeX.Core": "24.11.11",
           "PKMUniverse.Core": "1.0.0",
+          "PKMUniverse.Legality": "1.0.0",
           "PKMUniverse.Switch": "1.0.0"
         },
         "runtime": {
@@ -27,6 +28,18 @@
       "PKMUniverse.Core/1.0.0": {
         "runtime": {
           "PKMUniverse.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PKMUniverse.Legality/1.0.0": {
+        "dependencies": {
+          "PKHeX.Core": "24.11.11",
+          "PKMUniverse.Core": "1.0.0"
+        },
+        "runtime": {
+          "PKMUniverse.Legality.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -59,6 +72,11 @@
       "hashPath": "pkhex.core.24.11.11.nupkg.sha512"
     },
     "PKMUniverse.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PKMUniverse.Legality/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

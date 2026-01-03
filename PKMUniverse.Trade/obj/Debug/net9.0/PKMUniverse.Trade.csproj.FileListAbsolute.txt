@@ -15,3 +15,6 @@ C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\obj\Debug\net9.0
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\obj\Debug\net9.0\refint\PKMUniverse.Trade.dll
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\obj\Debug\net9.0\PKMUniverse.Trade.pdb
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\obj\Debug\net9.0\ref\PKMUniverse.Trade.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\obj\Debug\net9.0\PKMUniverse.Trade.sourcelink.json
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\bin\Debug\net9.0\PKMUniverse.Legality.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Trade\bin\Debug\net9.0\PKMUniverse.Legality.pdb

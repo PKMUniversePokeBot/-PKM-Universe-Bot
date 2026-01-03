@@ -88,7 +88,38 @@ public class TradeBotRunner
             TrainerName = trainerName,
             Pokemon = pokemon,
             PokemonName = GetPokemonName(pokemon),
-            TradeCode = tradeCode
+            TradeCode = tradeCode,
+            Type = TradeType.Trade
+        };
+
+        return _queue.Enqueue(entry);
+    }
+
+    public QueueResult AddCloneToQueue(ulong userId, string trainerName, int tradeCode)
+    {
+        var entry = new TradeEntry<PKM>
+        {
+            UserId = userId,
+            TrainerName = trainerName,
+            Pokemon = null,
+            PokemonName = "Clone Trade",
+            TradeCode = tradeCode,
+            Type = TradeType.Clone
+        };
+
+        return _queue.Enqueue(entry);
+    }
+
+    public QueueResult AddDumpToQueue(ulong userId, string trainerName, int tradeCode)
+    {
+        var entry = new TradeEntry<PKM>
+        {
+            UserId = userId,
+            TrainerName = trainerName,
+            Pokemon = null,
+            PokemonName = "Dump Trade",
+            TradeCode = tradeCode,
+            Type = TradeType.Dump
         };
 
         return _queue.Enqueue(entry);

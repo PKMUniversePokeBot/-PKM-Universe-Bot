@@ -21,38 +21,18 @@
           "bin/placeholder/PKMUniverse.Core.dll": {}
         }
       },
-      "PKMUniverse.Switch/1.0.0": {
+      "PKMUniverse.Legality/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "PKHeX.Core": "24.11.11",
           "PKMUniverse.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/PKMUniverse.Switch.dll": {}
+          "bin/placeholder/PKMUniverse.Legality.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PKMUniverse.Switch.dll": {}
-        }
-      }
-    },
-    "net9.0/win-x64": {
-      "PKHeX.Core/24.11.11": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/PKHeX.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/PKHeX.Core.dll": {}
-        }
-      },
-      "PKMUniverse.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/PKMUniverse.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/PKMUniverse.Core.dll": {}
+          "bin/placeholder/PKMUniverse.Legality.dll": {}
         }
       },
       "PKMUniverse.Switch/1.0.0": {
@@ -89,6 +69,11 @@
       "path": "../PKMUniverse.Core/PKMUniverse.Core.csproj",
       "msbuildProject": "../PKMUniverse.Core/PKMUniverse.Core.csproj"
     },
+    "PKMUniverse.Legality/1.0.0": {
+      "type": "project",
+      "path": "../PKMUniverse.Legality/PKMUniverse.Legality.csproj",
+      "msbuildProject": "../PKMUniverse.Legality/PKMUniverse.Legality.csproj"
+    },
     "PKMUniverse.Switch/1.0.0": {
       "type": "project",
       "path": "../PKMUniverse.Switch/PKMUniverse.Switch.csproj",
@@ -99,6 +84,7 @@
     "net9.0": [
       "PKHeX.Core >= 24.11.11",
       "PKMUniverse.Core >= 1.0.0",
+      "PKMUniverse.Legality >= 1.0.0",
       "PKMUniverse.Switch >= 1.0.0"
     ]
   },
@@ -129,6 +115,9 @@
           "projectReferences": {
             "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj": {
               "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Core\\PKMUniverse.Core.csproj"
+            },
+            "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj": {
+              "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Legality\\PKMUniverse.Legality.csproj"
             },
             "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Switch\\PKMUniverse.Switch.csproj": {
               "projectPath": "C:\\Users\\ericr\\Downloads\\PKM-Universe-Bot-NEW\\PKMUniverse.Switch\\PKMUniverse.Switch.csproj"
@@ -174,23 +163,11 @@
             "version": "[9.0.11, 9.0.11]"
           },
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[9.0.11, 9.0.11]"
           },
           {
-            "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
             "version": "[9.0.11, 9.0.11]"
           }
         ],
@@ -200,11 +177,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win-x64": {
-        "#import": []
       }
     }
   }

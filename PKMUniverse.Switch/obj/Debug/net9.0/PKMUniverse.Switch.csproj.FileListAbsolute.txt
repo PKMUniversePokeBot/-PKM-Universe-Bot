@@ -13,3 +13,4 @@ C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Debug\net9.
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Debug\net9.0\refint\PKMUniverse.Switch.dll
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Debug\net9.0\PKMUniverse.Switch.pdb
 C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Debug\net9.0\ref\PKMUniverse.Switch.dll
+C:\Users\ericr\Downloads\PKM-Universe-Bot-NEW\PKMUniverse.Switch\obj\Debug\net9.0\PKMUniverse.Switch.sourcelink.json
